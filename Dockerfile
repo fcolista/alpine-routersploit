@@ -1,7 +1,7 @@
-FROM alpine:3.3
+FROM alpine:latest
 MAINTAINER Francesco Colista <fcolista@alpinelinux.org>
 ENV PATH=$PATH:/usr/share/routersploit
-RUN echo "http://nl.alpinelinux.org/alpine/v3.3/community" >> /etc/apk/repositories && \
+RUN echo "http://nl.alpinelinux.org/alpine/v3.4/community" >> /etc/apk/repositories && \
     echo "http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
 	apk add -U \
 		git \

@@ -1,7 +1,7 @@
 FROM alpine:latest
 MAINTAINER Francesco Colista <fcolista@alpinelinux.org>
 ENV PATH=$PATH:/usr/share/routersploit
-RUN echo "http://nl.alpinelinux.org/alpine/v3.4/community" >> /etc/apk/repositories && \
+RUN echo "http://nl.alpinelinux.org/alpine/v3.6/community" >> /etc/apk/repositories && \
     echo "http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
 	apk add -U \
 		git \
@@ -12,7 +12,7 @@ RUN echo "http://nl.alpinelinux.org/alpine/v3.4/community" >> /etc/apk/repositor
 		python-dev \
 		ncurses-dev \
 		libffi-dev \
-		openssl-dev \
+		libressl-dev \
 		py-setuptools \
 		readline-dev && \
 	cd /usr/share && \
